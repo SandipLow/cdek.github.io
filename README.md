@@ -10,3 +10,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: He/Him
 - ⚡ Fun fact: I have < 1 year of programming experience.
 -->
+I'm Sandip Low, a 18 y/o guy who loves game developement, programming.
+
+- 🌱 I’m currently learning 3D character controlling on screen
+- 📫 How to reach me: sandipbkt2002@gmail.com
+- 😄 Pronouns: He/Him
+- ⚡ Fun fact: I have < 1 year of programming experience.
