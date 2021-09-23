@@ -13,7 +13,7 @@ body{
     width: 100%;
 }
 .bear{
-    background-image: url(../Assets/bear.png);
+    background-image: url(../Assets/bear.PNG);
     position: absolute;
     left: 52px;
     bottom: 80px;
