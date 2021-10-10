@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website - contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
     
+    <div class="header" id="header">
+        <img src="images/logo.png" alt="logo" id="logo" class="items">
+        <button id="menu" class="items" onclick="mb()"></button>
+        <code id="title" class="items">Page Title</code>
+        <div id="search" class="items">
+            Search :<input type="text" style="height: 30px; width: 100px; position: absolute;">
+        </div>
+        <div id="menubar" style="display: none;">
+            <li><a href="index.html">Template Page</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li>About</li>
+            <li><a href="contact.html">Contact</a></li><br>
+        </div>
+    </div>
+
+    <script src="js/header.js"></script>
 </body>
 </html>
