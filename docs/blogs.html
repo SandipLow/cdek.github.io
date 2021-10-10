@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website - Blogs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
     <img src="images/RandomBackground.jpg" alt="randomimage" style="position: fixed; overflow-x: hidden; height: 216px; width: 100%;">
@@ -18,54 +20,15 @@
     <div class="content_blog">
         
         <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
+            <form action="/blogs.html" id="add-comment">
+                <h3>Name</h3>
+                <input type="text" name="name" required><br><br>
+                <h3>Comment</h3>
+                <input type="text" name="comment" required><br><br>
+                <button class="mybtn" type="submit">Submit</button>
+            </form>
         </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
-        <div class="blog">
-            <h3>This is Title</h3>
-            <br>
-            <p>About/intro of your blog Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt id doloremque reprehenderit culpa odio, debitis laborum velit esse vel adipisci quisquam natus quis saepe distinctio quasi repellat et in perferendis?</p>
-            <br>
-            <button class="mybtn">Read more...</button>
-        </div>
+
         <div class="blog">
             <h3>This is Title</h3>
             <br>
@@ -91,8 +54,10 @@
         </div>
     </div>
     
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <script src="js/index.js"></script>
+    <script src="js/header.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/comment.js"></script>
 </body>
 </html>
