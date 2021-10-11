@@ -13,8 +13,9 @@ body{
     left: 23%;
     padding: 3%;
     overflow-y: scroll;
-    height: 66%;
-    max-width: 70%;
+    height: auto;
+    bottom: 0;
+    width: 71%;
 }
 
 .title{
@@ -38,6 +39,7 @@ body{
     position: relative;
     bottom: 4px;
     padding: 4px;
+    cursor: pointer;
 }
 
 .title_blog{
