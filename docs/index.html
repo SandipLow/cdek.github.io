@@ -1,201 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/context.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Sandip Low</title>
+    <link rel="stylesheet" href="./css/utilities.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
+
 <body>
-    <img src="images/RandomBackground.jpg" alt="randomimage" style="position: fixed; overflow-x: hidden; height: 25%; width: 100%;">
-
-    <div class="context">
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
-        <li>context</li>
+    <!-- navbar -->
+    <link rel="stylesheet" href="./css/navbar.css">
+    <div class="navbar flex">
+        <div class="navbar-items">
+            <div id="menubtn" onclick="toggle('toggle')"></div>
+            <div id="title">Sandip</div>
+        </div>
+        <nav class="navbar-items">
+            <ul id="links-1">
+                <i style="margin-left: 1vw;"><a href="#Home">Home</a></i>
+                <i style="margin-left: 1vw;"><a href="#About">About</a></i>
+                <i style="margin-left: 1vw;"><a href="#Contact">Contact</a></i>
+            </ul>
+            <div id="searchbar">
+                Search : <input name="query" type="text" style="width: 90px; opacity: 100%;">
+            </div>
+        </nav>
+        <nav id="links-2" class="navbar-items toggle">
+            <i style="margin-left: 1vw;"><a href="#Home">Home</a></i>
+            <i style="margin-left: 1vw;"><a href="#About">About</a></i>
+            <i style="margin-left: 1vw;"><a href="#Contact">Contact</a></i>
+        </nav>
     </div>
-    
-    <div class="title">
-        <h1>Title</h1>
-        <br>
-        <p>There will be a short Description about this page</p>
+    <script src="./js/navbar.js"></script>
+
+    <!-- parallax cover -->
+    <div class="parallax cover" id="Home">
+        <img src="./images/Logo.png" alt="My pic" id="banner-pic">
+        <div style="margin: 15px;"><span class="greet"> Hi there..! </span></div>
+        <h2>I'm <span class="typed"></span></h2>
+        <script src="js/typed.js"></script>
+        <script>
+            var typed = new Typed('.typed', {
+                strings: ['a Student', 'a Game Developer', 'a computer enthusiast', 'Sandip Low'],
+                typeSpeed: 150,
+			    loop: true,
+			    backDelay: 1100,
+			    backSpeed: 30
+            });
+            
+        </script>
     </div>
 
-    <div class="content">
-        <h3>This page is not made completeley</h3>
-        <h5>But Check it out :<a href="/CDEK"> CDEK</a></h5><br><hr><br>
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1aEGwD1aTLw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="height: inherit;"></iframe><br><br><hr><br>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus unde commodi veritatis assumenda a, debitis soluta reprehenderit ipsa numquam eos fugiat quasi dicta dolores repellat quia perspiciatis animi ipsum cupiditate!</p>
+    <!-- About -->
+    <div id="About">
+        <div class="d1" style="display: inline-flex;">
+            <img src="./images/MyPic.jpg" alt="My Pic" height="200px">
+            <div class="margin">
+                <h3>Sandip Low</h3><br>
+                <h5>Age : 19yrs</h5><br>
+                <h5><img src="./images/location.png" alt="Address" height="15px"> : Baktarnagar, Raniganj, WestBengal, India</h5><br>
+                <button class="MyBtn"> Download CV </button>
+            </div>
+        </div>
+
+        <div class="d2">
+            <h2>About me</h2><hr><br>
+            <p>Hi there, I am Sandip Low. A 19 y/o guy who loves programming, gaming and learning something new. I've 2 years of programming experience.</p><br>
+
+            <h3>Programming Languages : </h3><br>
+            <img src="./images/programming/js.png" alt="JS" class="pr-icon">
+            <img src="./images/programming/java.png" alt="Java" class="pr-icon">
+            <img src="./images/programming/python.png" alt="Python" class="pr-icon">
+            <img src="./images/programming/cs.png" alt="C#" class="pr-icon">
+            <img src="./images/programming/c++.png" alt="C++" class="pr-icon">
+            <img src="./images/programming/c.png" alt="C" class="pr-icon">
+            <img src="./images/programming/kotlin.png" alt="Kotlin" class="pr-icon"><br><br>
+
+            <h3>Web Development :</h3><br>
+            <h4>Frontend :</h4>
+            <img src="./images/programming/html-css-js.png" alt="native html css js" class="pr-icon">
+            <img src="./images/programming/bootstrap.png" alt="Bootstrap" class="pr-icon">
+            <img src="./images/programming/react.png" alt="React" class="pr-icon"><br><br>
+            <h4>Backend :</h4>
+            <img src="./images/programming/flask.png" alt="flask" class="pr-icon">
+            <img src="./images/programming/php.png" alt="PHP" class="pr-icon">
+            <img src="./images/programming/nodejs.png" alt="nodejs" class="pr-icon">
+            <img src="./images/programming/firebase.png" alt="Firebase" class="pr-icon">
+            <img src="./images/programming/mysql.png" alt="MYSQL" class="pr-icon"><br><br>
+
+            <h3>App Development :</h3><br>
+            <img src="./images/programming/androidstudio.png" alt="Android Studio" class="pr-icon">
+            <img src="./images/programming/flutter.png" alt="Flutter" class="pr-icon">
+            <img src="./images/programming/kivy.png" alt="Kivy" class="pr-icon"><br><br>
+
+            <h3>Game Development :</h3><br>
+            <img src="./images/programming/unity.png" alt="Unity" class="pr-icon">
+        </div>
+        
+    </div>
+
+    <!-- Contact -->
+    <div class="parallax" id="Contact">
         <br><br>
-        <h4 style="text-align: center;">By Author</h4>
+        <div class="d1">
+            <h3>No matter from where are you from....</h3>
+            <h3>Feel free to contact me...</h3>
+            <h3>You can find me on most social media platforms!.
+                Please use my email only for business inquires,
+                or other important issues</h3>
+        </div>
+        <div class="d1" style="width: fit-content;">
+            <a href=""><h4>Social links :</h4></a><br>
+            <!-- <a href=""><img src="./images/whatsapp.png" alt="WA" class="pr-icon"></a> -->
+            <a href="https://facebook.com/asad.ion.5"><img src="./images/facebook.png" alt="FB" class="pr-icon"></a>
+            <!-- <a href=""><img src="./images/gmail.png" alt="Mail" class="pr-icon"></a> -->
+            <a href="https://youtube.com/channel/UC6DAOimMnTUCpPQ2_-7RtZg"><img src="./images/youtube.png" alt="YT" class="pr-icon"></a>
+            <a href="/CDEK"><img src="./images/cdek.png" alt="CDEK" class="pr-icon"></a>
+            <a href="https://discordapp.com/users/Sandip#3032"><img src="./images/discord.png" alt="discord" class="pr-icon"></a>
+        </div>
+        <div class="d1">
+            <form id="contact-request-form" action="submit">
+                Name* : <input type="text" name="name" value="Enter Your Name" required><br><br>
+                Email* : <input type="email" name="email" value="Enter a valid Email to get response" required><br><br>
+                Purpose of contact : <br><br><textarea name="subject" cols="50" rows="5" required></textarea><br><br>
+                <button type="submit" class="btn-blue">Submit</button>
+            </form>
+            <br>
+            <h4>I'll got you back in 48 hours (if necessary)..</h4>
+        </div>
         <br><br>
     </div>
 
-    <div class="header" id="header">
-        <img src="images/logo.png" alt="logo" id="logo" class="items">
-        <button id="menu" class="items" onclick="mb()"></button>
-        <code id="title" class="items">Page Title</code>
-        <div id="search" class="items">
-            Search :<input type="text" style="height: 30px; width: 100px; position: absolute;">
-        </div>
-        <div id="menubar" style="display: none;">
-            <li><a href="index.html">Template Page</a></li>
-            <li><a href="blogs.html">Blogs</a></li>
-            <li>About</li>
-            <li><a href="contact.html">Contact</a></li><br>
-        </div>
-    </div>
-
-    <script src="js/header.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./js/contact.js"></script>
 </body>
+
 </html>

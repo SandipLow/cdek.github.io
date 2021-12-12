@@ -1,0 +1,108 @@
+.cover{
+    background-image: url(../images/Cover.png);
+    height: 100vh;
+    text-align: center;
+}
+
+.cover div .greet{
+    color: aqua;
+    font-size: 6vh;
+    padding: 4px;
+    border: 5px solid;
+    text-align: center;
+    width: fit-content;
+}
+
+.cover h2{
+    margin-top: 2px ;
+    color: gold;
+}
+
+#banner-pic{
+    width: 20vh;
+    margin-top: 30vh;
+    border-radius: 50%;
+}
+
+#About{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+#About .d1, #About .d2{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(160, 172, 172);
+    border-radius: 10px;
+    max-width: 80vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#About .d1 .margin{
+    width: 170px;
+}
+
+.pr-icon{
+    height: 40px;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 20%;
+}
+
+.pr-icon:hover{
+    cursor: pointer;
+    background-color: rgba(255, 217, 0, 0.438);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Contact{
+    background-image: url(../images/contact.png);
+    height: fit-content;
+}
+
+#contact-request-form input{
+    /* position: absolute; */
+    left: 100px;
+    width: 60vw;
+    height: 25px;
+    border-radius: 4px;
+}
+
+#contact-request-form textarea{
+    width: 80vw;
+    border-radius: 4px;
+}
+
+#Contact .d1, #Contact .d2{
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(160, 172, 172);
+    border-radius: 10px;
+    height: fit-content;
+    max-width: 80vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media screen and (min-width: 800px) {
+    #Contact{
+        display: inline-flex;
+        width: 100%;
+    }
+
+    #Contact .d1, #Contact .d2{
+        width: 540px;
+    }
+
+    #contact-request-form input{
+        left: 800px;
+        width: 30vw;
+    }
+    
+    #contact-request-form textarea{
+        width: 100%;
+    }
+}
