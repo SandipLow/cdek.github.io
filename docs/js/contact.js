@@ -17,11 +17,11 @@ function addData(form) {
     })
     .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
-        prompt("Thanks for contacting... ; )")
+        alert("Thanks for contacting...😉")
     })
     .catch((error) => {
-        alert("Error adding document: ", error);
-        console.log("Error adding document: ", error);
+        alert("Error adding document...😢");
+        // console.log("Error adding document: ", error);
     });
 }
 
