@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sandip Low"/>
     <title>Sandip Low</title>
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="./manifest.json">
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                 <i style="margin-left: 1vw;"><a href="#Contact">Contact</a></i>
             </ul>
             <div id="searchbar">
-                Search : <input name="query" type="text" style="width: 90px; opacity: 100%;">
+                <label for="query">Search : </label> <input name="query" type="text" style="width: 90px; opacity: 100%;">
             </div>
         </nav>
         <nav id="links-2" class="navbar-items toggle">
@@ -61,8 +63,8 @@
             <img src="./images/MyPic.jpg" alt="My Pic" height="200px">
             <div class="margin">
                 <h3>Sandip Low</h3><br>
-                <h5>Age : 19yrs</h5><br>
-                <h5><img src="./images/location.png" alt="Address" height="15px"> : Baktarnagar, Raniganj, WestBengal, India</h5><br>
+                <p>Age : 19yrs</p><br>
+                <p><img src="./images/location.png" alt="Address" height="15px"> : Baktarnagar, Raniganj, WestBengal, India</p><br>
                 <button class="MyBtn"> Download CV </button>
             </div>
         </div>
@@ -100,7 +102,7 @@
             <h3>App Development :</h3><br>
             <img src="./images/programming/react.png" alt="React" class="pr-icon">
             <img src="./images/programming/androidstudio.png" alt="Android Studio" class="pr-icon">
-            <img src="./images/programming/flutter.png" alt="Flutter" class="pr-icon">
+            <!-- <img src="./images/programming/flutter.png" alt="Flutter" class="pr-icon"> -->
             <img src="./images/programming/kivy.png" alt="Kivy" class="pr-icon"><br><br>
 
             <h3>Game Development :</h3><br>
@@ -113,28 +115,31 @@
     <div class="parallax" id="Contact">
         <br><br>
         <div class="d1">
-            <h3>No matter from where are you from....</h3>
-            <h3>Feel free to contact me...</h3>
-            <h3>You can find me on most social media platforms!.
+            <h3>No matter from where are you from....</h3><br>
+            <h3>Feel free to contact me...</h3><br>
+            <p>You can find me on most social media platforms!.
                 Please use my email only for business inquires,
-                or other important issues</h3>
+                or other important issues</p>
         </div>
         <div class="d1" style="width: fit-content;">
-            <a href=""><h4>Social links :</h4></a><br>
+            <h4>Social links :</h4><br>
             <!-- <a href=""><img src="./images/whatsapp.png" alt="WA" class="pr-icon"></a> -->
+            <a href="mailto:sandipbkt2002@gmail.com"><img src="./images/gmail.png" alt="FB" class="pr-icon" style="height: 30px; margin-bottom: 8px;"></a>
+            <a href="https://telegram.me/Sandip_Low"><img src="./images/telegram.png" alt="FB" class="pr-icon"></a>
+            <a href="https://wa.me/918927886351?text=Hi...❤!"><img src="./images/whatsapp.png" alt="FB" class="pr-icon"></a>
             <a href="https://facebook.com/asad.ion.5"><img src="./images/facebook.png" alt="FB" class="pr-icon"></a>
+            <a href="https://discordapp.com/users/Sandip#3032"><img src="./images/discord.png" alt="discord" class="pr-icon"></a>
             <a href="https://github.com/SandipLow"><img src="./images/github.png" alt="github" class="pr-icon"></a>
             <!-- <a href=""><img src="./images/gmail.png" alt="Mail" class="pr-icon"></a> -->
             <a href="https://youtube.com/channel/UC6DAOimMnTUCpPQ2_-7RtZg"><img src="./images/youtube.png" alt="YT" class="pr-icon"></a>
-            <a href="https://discordapp.com/users/Sandip#3032"><img src="./images/discord.png" alt="discord" class="pr-icon"></a>
             <a href="/CDEK"><img src="./images/cdek.png" alt="CDEK" class="pr-icon"></a>
         </div>
         <div class="d1">
             <form id="contact-request-form" action="submit">
-                Name* : <input type="text" name="name" value="Enter Your Name" required><br><br>
-                Email* : <input type="email" name="email" value="Enter a valid Email to get response" required><br><br>
-                Purpose of contact : <br><br><textarea name="subject" cols="50" rows="5" required></textarea><br><br>
-                <button type="submit" class="btn-blue">Submit</button>
+                Name* : <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+                Email* : <input type="email" name="email" placeholder="Enter a valid Email to get response" required><br><br>
+                <label for="subject"> Purpose of contact : </label><br><br><textarea name="subject" cols="50" rows="5" required></textarea><br><br>
+                <button type="submit" class="btn-blue" style="background-color: aquamarine; border-radius: 0;">Submit</button>
             </form>
             <br>
             <h4>I'll got you back in 48 hours (if necessary)..</h4>

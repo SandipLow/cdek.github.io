@@ -10,17 +10,18 @@ firebase.initializeApp({
 var db = firebase.firestore();
 
 function addData(form) {
-    db.collection("contact requests").add({
+    db.collection("contact_request").add({
         name: form.name.value,
         email: form.email.value,
         message: form.subject.value
     })
     .then((docRef) => {
         console.log("Document written with ID: ", docRef.id);
-        location.reload();
+        prompt("Thanks for contacting... ; )")
     })
     .catch((error) => {
-        console.error("Error adding document: ", error);
+        alert("Error adding document: ", error);
+        console.log("Error adding document: ", error);
     });
 }
 
