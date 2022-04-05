@@ -5,8 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sandip Low"/>
-    <title>Sandip Low</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#02560e">
+    <!-- <meta name="keywords" content="Sandip Low, Sandip Low Baktarnagar, sandip low, sandiplow,"> -->
+    <link rel="canonical" href="https://sandiplow.github.io/">
+    <title>Sandip Low | Student, GameDev, Computer enthusiast</title>
+    <meta name="description" content="Hi there, I am Sandip Low. A 19 y/o guy who loves programming, gaming and learning something new. I've 2 years of programming experience.">
+    <meta name="og:title" property="og:title" content="Sandip Low | Student, GameDev, Computer enthusiast">
+    <meta property="og:description" content="Hi there, I am Sandip Low. A 19 y/o guy who loves programming, gaming and learning something new. I've 2 years of programming experience.">
+    <meta property="og:locale" content="en_IN">
+    <meta property="og:type" content="article">
+    <meta property="article:publisher" content="https://facebook.com/asad.ion.5">
+    <meta name="msapplication-TileImage" content="https://sandiplow.github.io/images/logo.webp>
     <link rel="stylesheet" href="./css/utilities.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
@@ -23,25 +33,25 @@
         </div>
         <nav class="navbar-items">
             <ul id="links-1">
-                <i style="margin-left: 1vw;"><a href="#Home">Home</a></i>
-                <i style="margin-left: 1vw;"><a href="#About">About</a></i>
-                <i style="margin-left: 1vw;"><a href="#Contact">Contact</a></i>
+                <li style="margin-left: 1vw;"><a href="#Home">Home</a></li>
+                <li style="margin-left: 1vw;"><a href="#About">About</a></li>
+                <li style="margin-left: 1vw;"><a href="#Contact">Contact</a></li>
             </ul>
             <div id="searchbar">
-                <label for="query">Search : </label> <input name="query" type="text" style="width: 90px; opacity: 100%;">
+                <label for="query">Search : </label> <input id="query" type="text" style="width: 90px; opacity: 100%;">
             </div>
         </nav>
-        <nav id="links-2" class="navbar-items toggle">
-            <i style="margin-left: 1vw;"><a href="#Home">Home</a></i>
-            <i style="margin-left: 1vw;"><a href="#About">About</a></i>
-            <i style="margin-left: 1vw;"><a href="#Contact">Contact</a></i>
-        </nav>
+        <ul id="links-2" class="navbar-items toggle">
+            <li style="margin-left: 1vw;"><a href="#Home">Home</a></li>
+            <li style="margin-left: 1vw;"><a href="#About">About</a></li>
+            <li style="margin-left: 1vw;"><a href="#Contact">Contact</a></li>
+        </ul>
     </div>
     <script src="./js/navbar.js"></script>
 
     <!-- parallax cover -->
     <div class="parallax cover" id="Home">
-        <img src="./images/logo.png" alt="My pic" id="banner-pic">
+        <img src="./images/logo.webp" alt="My pic" id="banner-pic">
         <div style="margin: 15px;"><span class="greet"> Hi there..! </span></div>
         <h2>I'm <span class="typed"></span></h2>
         <script src="js/typed.js"></script>
@@ -49,9 +59,9 @@
             var typed = new Typed('.typed', {
                 strings: ['a Student', 'a Game Developer', 'a computer enthusiast', 'Sandip Low'],
                 typeSpeed: 150,
-			    loop: true,
-			    backDelay: 1100,
-			    backSpeed: 30
+                loop: true,
+                backDelay: 1100,
+                backSpeed: 30
             });
             
         </script>
@@ -136,9 +146,12 @@
         </div>
         <div class="d1">
             <form id="contact-request-form" action="submit">
-                Name* : <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
-                Email* : <input type="email" name="email" placeholder="Enter a valid Email to get response" required><br><br>
-                <label for="subject"> Purpose of contact : </label><br><br><textarea name="subject" cols="50" rows="5" required></textarea><br><br>
+                <label for="name">Name* : </label>
+                <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+                <label for="email">Email* : </label>
+                <input type="email" name="email" placeholder="Enter a valid Email to get response" required><br><br>
+                <label for="sub"> Purpose of contact : </label><br><br>
+                <textarea id="sub" name="subject" cols="50" rows="5" required></textarea><br><br>
                 <button type="submit" class="btn-blue" style="background-color: aquamarine; border-radius: 0;">Submit</button>
             </form>
             <br>

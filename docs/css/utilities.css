@@ -1,7 +1,8 @@
-i, a {
+li, i, a {
     text-decoration: none;
     font-style: unset;
     color: unset;
+    display: -webkit-inline-box;
 }
 
 *{

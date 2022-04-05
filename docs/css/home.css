@@ -1,5 +1,5 @@
 .cover{
-    background-image: url(../images/Cover.png);
+    background-image: url(../images/Cover.webp);
     height: 100vh;
     text-align: center;
 }
@@ -56,7 +56,7 @@
 
 .pr-icon:hover{
     cursor: pointer;
-    background-color: rgba(255, 217, 0, 0.438);
+    background-color: rgba(0, 255, 157, 0.438);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 15px;
 }
@@ -68,8 +68,9 @@
 
 #contact-request-form input{
     /* position: absolute; */
-    left: 100px;
-    width: 60vw;
+    /* right: 100px; */
+    margin-left: 10px;
+    width: 70%;
     height: 25px;
     border-radius: 4px;
 }
@@ -99,10 +100,10 @@
         width: 540px;
     }
 
-    #contact-request-form input{
+    /* #contact-request-form input{
         left: 800px;
         width: 30vw;
-    }
+    } */
     
     #contact-request-form textarea{
         width: 100%;
