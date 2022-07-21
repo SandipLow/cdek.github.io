@@ -1,6 +1,6 @@
 import './style.css'
 import * as THREE from "three"
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 
 // All pre loaders : scene, cam & renderer
@@ -14,8 +14,8 @@ const renderer = new THREE.WebGLRenderer({
   canvas : document.querySelector("#bg"),
 });
 
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
+// renderer.setPixelRatio(window.devicePixelRatio);
+// renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.x = 5;
 camera.position.y = 10;
 camera.position.z = 20;
@@ -23,18 +23,19 @@ camera.position.z = 20;
 
 
 // Texture :
-const bg_texture = new THREE.TextureLoader().load('./Assets/bg.jpg');
-const me_texture = new THREE.TextureLoader().load('./Assets/me.jpg');
-const me_pix_texture = new THREE.TextureLoader().load('./Assets/me_pixel.png');
-const earth_texture = new THREE.TextureLoader().load('./planets/earth.jpg');
-const earth_normal = new THREE.TextureLoader().load('./planets/earth_normal_map.tif');
-const mercury_texture = new THREE.TextureLoader().load('./planets/mercury.jpg');
-const venus_texture = new THREE.TextureLoader().load('./planets/venus.jpg');
-const mars_texture = new THREE.TextureLoader().load('./planets/mars.jpg');
-const jupiter_texture = new THREE.TextureLoader().load('./planets/jupiter.jpg');
-const saturn_texture = new THREE.TextureLoader().load('./planets/saturn.jpg');
-const uranus_texture = new THREE.TextureLoader().load('./planets/uranus.jpg');
-const neptune_texture = new THREE.TextureLoader().load('./planets/neptune.jpg');
+const bg_texture = new THREE.TextureLoader().load('./assets/bg.jpg');
+const me_texture = new THREE.TextureLoader().load('./assets/me.jpg');
+const me_pix_texture = new THREE.TextureLoader().load('./assets/me_pixel.png');
+const earth_texture = new THREE.TextureLoader().load('./assets/planets/earth.jpg');
+const sun_texture = new THREE.TextureLoader().load('./assets/planets/2k_sun.jpg');
+const earth_normal = new THREE.TextureLoader().load('./assets/planets/earth_normal_map.tif');
+const mercury_texture = new THREE.TextureLoader().load('./assets/planets/mercury.jpg');
+const venus_texture = new THREE.TextureLoader().load('./assets/planets/venus.jpg');
+const mars_texture = new THREE.TextureLoader().load('./assets/planets/mars.jpg');
+const jupiter_texture = new THREE.TextureLoader().load('./assets/planets/jupiter.jpg');
+const saturn_texture = new THREE.TextureLoader().load('./assets/planets/saturn.jpg');
+const uranus_texture = new THREE.TextureLoader().load('./assets/planets/uranus.jpg');
+const neptune_texture = new THREE.TextureLoader().load('./assets/planets/neptune.jpg');
 
 scene.background = bg_texture;
 
@@ -64,9 +65,10 @@ scene.add(cube2);
 const sun = new THREE.Mesh(
   new THREE.SphereGeometry(10),
   new THREE.MeshStandardMaterial( {
-    color: 0xffcc66, 
-    emissive: 0xff0000, 
-    emissiveIntensity: 5
+    // color: 0xffcc66, 
+    // emissive: 0xff0000, 
+    // emissiveIntensity: 5
+    map: sun_texture
   } )
 );
 
@@ -173,6 +175,9 @@ function animate () {
   })
 
   // renderer.render(helpcam);
+    
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
   renderer.render(scene, camera);
 }
