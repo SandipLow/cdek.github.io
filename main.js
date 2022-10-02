@@ -1,7 +1,9 @@
-import './style.css'
 import * as THREE from "three"
 // import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-
+const loadingScr = document.getElementById("loading_scene")
+const bg = document.getElementById("bg")
+const content = document.getElementById("content")
+const load_progress = document.getElementById("load_progress")
 
 // All pre loaders : scene, cam & renderer
 const scene = new THREE.Scene();
@@ -11,7 +13,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHe
 // const helpcam = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHeight, 0.1, 1000);
 
 const renderer = new THREE.WebGLRenderer({
-  canvas : document.querySelector("#bg"),
+  canvas : bg,
 });
 
 // renderer.setPixelRatio(window.devicePixelRatio);
@@ -21,24 +23,51 @@ camera.position.y = 10;
 camera.position.z = 20;
 // helpcam.position.setZ(30);
 
+const loadingManager = new THREE.LoadingManager();
+
+loadingManager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+
+	load_progress.innerText = `Started loading file: ${url} .\nLoaded ${itemsLoaded} of ${itemsTotal} files.`
+
+};
+
+loadingManager.onLoad = function () {
+	loadingScr.style.display = 'none';
+  bg.style.display = 'block'
+  content.style.display = 'grid'
+};
+
+loadingManager.onProgress = function (url, itemsLoaded, itemsTotal ) {
+
+	load_progress.innerText = `Loading file:  ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files.`;
+
+};
+
+loadingManager.onError = function (url) {
+
+	console.error( 'There was an error loading ' + url );
+
+};
+
+const textureLoader = new THREE.TextureLoader(loadingManager);
+const binaryTextureLoader = new THREE.BinaryTextureLoader(loadingManager);
 
 // Texture :
-const bg_texture = new THREE.TextureLoader().load('./assets/bg.jpg');
-const me_texture = new THREE.TextureLoader().load('./assets/me.jpg');
-const me_pix_texture = new THREE.TextureLoader().load('./assets/me_pixel.png');
-const earth_texture = new THREE.TextureLoader().load('./assets/planets/earth.jpg');
-const sun_texture = new THREE.TextureLoader().load('./assets/planets/2k_sun.jpg');
-const earth_normal = new THREE.TextureLoader().load('./assets/planets/earth_normal_map.tif');
-const mercury_texture = new THREE.TextureLoader().load('./assets/planets/mercury.jpg');
-const venus_texture = new THREE.TextureLoader().load('./assets/planets/venus.jpg');
-const mars_texture = new THREE.TextureLoader().load('./assets/planets/mars.jpg');
-const jupiter_texture = new THREE.TextureLoader().load('./assets/planets/jupiter.jpg');
-const saturn_texture = new THREE.TextureLoader().load('./assets/planets/saturn.jpg');
-const uranus_texture = new THREE.TextureLoader().load('./assets/planets/uranus.jpg');
-const neptune_texture = new THREE.TextureLoader().load('./assets/planets/neptune.jpg');
+const bg_texture = textureLoader.load('./assets/bg.jpg');
+const me_texture = textureLoader.load('./assets/me.jpg');
+const me_pix_texture = textureLoader.load('./assets/me_pixel.png');
+const earth_texture = textureLoader.load('./assets/planets/earth.jpg');
+const sun_texture = textureLoader.load('./assets/planets/2k_sun.jpg');
+const earth_normal = binaryTextureLoader.load('./assets/planets/earth_normal_map.tif');
+const mercury_texture = textureLoader.load('./assets/planets/mercury.jpg');
+const venus_texture = textureLoader.load('./assets/planets/venus.jpg');
+const mars_texture = textureLoader.load('./assets/planets/mars.jpg');
+const jupiter_texture = textureLoader.load('./assets/planets/jupiter.jpg');
+const saturn_texture = textureLoader.load('./assets/planets/saturn.jpg');
+const uranus_texture = textureLoader.load('./assets/planets/uranus.jpg');
+const neptune_texture = textureLoader.load('./assets/planets/neptune.jpg');
 
 scene.background = bg_texture;
-
 
 // Cube :
 const geometry = new THREE.BoxGeometry( 10, 10, 10 );

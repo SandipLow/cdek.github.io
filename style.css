@@ -30,7 +30,7 @@ main {
   margin: 0px auto;
   padding: 120px 0px;
   
-  display: grid;
+  display: none;
   grid-template-columns: repeat(12, 1fr);
 }
 
