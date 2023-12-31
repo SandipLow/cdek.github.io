@@ -1,4 +1,12 @@
-@import url("https://use.typekit.net/jmk3xov.css");
+@font-face {
+  font-family: "brandon-grotesque";
+  src: url('/assets/fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-light-58a8a4b38001d.otf');
+}
+
+@font-face {
+  font-family: "sniglet";
+  src: url('/assets/fonts/Sniglet-Regular.ttf');
+}
 
 canvas {
   position: fixed;
@@ -14,6 +22,11 @@ canvas {
   font-family: brandon-grotesque, sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+::selection {
+  background-color: blueviolet;
+  color: white;
 }
 
 body {
@@ -35,7 +48,7 @@ main {
 }
 
 h1, h2, h3, blockquote {
-  font-family: elevon, sans-serif;
+  font-family: sniglet, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
