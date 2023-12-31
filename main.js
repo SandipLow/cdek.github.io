@@ -53,19 +53,19 @@ const textureLoader = new THREE.TextureLoader(loadingManager);
 const binaryTextureLoader = new THREE.BinaryTextureLoader(loadingManager);
 
 // Texture :
-const bg_texture = textureLoader.load('./assets/bg.jpg');
-const me_texture = textureLoader.load('./assets/me.jpg');
-const me_pix_texture = textureLoader.load('./assets/me_pixel.png');
-const earth_texture = textureLoader.load('./assets/planets/earth.jpg');
-const sun_texture = textureLoader.load('./assets/planets/2k_sun.jpg');
-const earth_normal = binaryTextureLoader.load('./assets/planets/earth_normal_map.tif');
-const mercury_texture = textureLoader.load('./assets/planets/mercury.jpg');
-const venus_texture = textureLoader.load('./assets/planets/venus.jpg');
-const mars_texture = textureLoader.load('./assets/planets/mars.jpg');
-const jupiter_texture = textureLoader.load('./assets/planets/jupiter.jpg');
-const saturn_texture = textureLoader.load('./assets/planets/saturn.jpg');
-const uranus_texture = textureLoader.load('./assets/planets/uranus.jpg');
-const neptune_texture = textureLoader.load('./assets/planets/neptune.jpg');
+const bg_texture = textureLoader.load('/bg.jpg');
+const me_texture = textureLoader.load('/me.jpg');
+const me_pix_texture = textureLoader.load('/me_pixel.png');
+const earth_texture = textureLoader.load('/planets/earth.jpg');
+const sun_texture = textureLoader.load('/planets/2k_sun.jpg');
+const earth_normal = binaryTextureLoader.load('/planets/earth_normal_map.tif');
+const mercury_texture = textureLoader.load('/planets/mercury.jpg');
+const venus_texture = textureLoader.load('/planets/venus.jpg');
+const mars_texture = textureLoader.load('/planets/mars.jpg');
+const jupiter_texture = textureLoader.load('/planets/jupiter.jpg');
+const saturn_texture = textureLoader.load('/planets/saturn.jpg');
+const uranus_texture = textureLoader.load('/planets/uranus.jpg');
+const neptune_texture = textureLoader.load('/planets/neptune.jpg');
 
 scene.background = bg_texture;
 
