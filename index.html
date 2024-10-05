@@ -1,343 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/ico" href="/favicon/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <link rel="stylesheet" href="./style.css" />
+        <title>Solar Scope</title>
+    </head>
 
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/favicon/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="./style.css">
-    <title>Solar Scope</title>
-  </head>
+    <body>
+      
+        <div id="loading_scene">
+            <link rel="stylesheet" href="./loadingScreen.css" />
 
-  <body>
+            <div class="loaders">
+                <div class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <circle id="test" cx="40" cy="40" r="32"></circle>
+                    </svg>
+                </div>
 
-    <div id="loading_scene" >
-      <link rel="stylesheet" href="./loadingScreen.css">
+                <div class="loader triangle">
+                    <svg viewBox="0 0 86 80">
+                        <polygon points="43 8 79 72 7 72"></polygon>
+                    </svg>
+                </div>
 
-      <div class="loaders" >
+                <div class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <rect x="8" y="8" width="64" height="64"></rect>
+                    </svg>
+                </div>
+            </div>
 
-        <div class="loader">
-            <svg viewBox="0 0 80 80">
-                <circle id="test" cx="40" cy="40" r="32"></circle>
-            </svg>
+            <span id="load_progress">Loading...</span>
         </div>
-        
-        <div class="loader triangle">
-            <svg viewBox="0 0 86 80">
-                <polygon points="43 8 79 72 7 72"></polygon>
-            </svg>
-        </div>
-        
-        <div class="loader">
-            <svg viewBox="0 0 80 80">
-                <rect x="8" y="8" width="64" height="64"></rect>
-            </svg>
-        </div>
 
-      </div>
+        <canvas id="bg"></canvas>
 
-      <span id="load_progress" >Loading...</span>
-    </div>
+        <main id="content" >
 
-    <canvas id="bg" ></canvas>
+            <header>
+            <h1>Sandip Low</h1>
+            <p>Hi There! 👋</p>
+            <p>I'm <span class="typed"></span></p>
+            <script>
+                var typed = new Typed('.typed', {
+                    strings: ['a Student', 'a Game Developer', 'a computer enthusiast', 'Sandip Low'],
+                    typeSpeed: 150,
+                    loop: true,
+                    backDelay: 1100,
+                    backSpeed: 30
+                });
+                
+            </script>
+            </header>
 
-    <main id="content" >
+            <blockquote>
+            <p>I ❤ making Coding stuff</p>
+            </blockquote>
 
-      <header>
-        <h1>Sandip Low</h1>
-        <p>Hi There! 👋</p>
-        <p>I'm <span class="typed"></span></p>
-        <script>
-            var typed = new Typed('.typed', {
-                strings: ['a Student', 'a Game Developer', 'a computer enthusiast', 'Sandip Low'],
-                typeSpeed: 150,
-                loop: true,
-                backDelay: 1100,
-                backSpeed: 30
-            });
+            <section>
+            <h2>📜 Manifesto</h2>
+
+            <h3>Sandip Low</h3>
+            <p>From : Baktarnagar, Raniganj, WestBengal, India</p>
+            <a target="_blank" href="/resume.html"><button class="MyBtn"> Download CV </button></a><br><br>
+
+            <p>
+                Greetings! I’m Sandip, an ambitious student and emerging technologist passionate about Power Electronics, Embedded Systems, Software Development, and Game Development. My academic voyage at NIT Durgapur is complemented by a strong practical understanding of Web Development using the MERN stack and Mobile App Development with Flutter.
+            </p>
+            <p>
+                In my final year of Electrical Engineering, I’m dedicated to deepening my conceptual strength while simultaneously honing my full-stack development skills. I believe in the power of interdisciplinary knowledge and am excited to blend my engineering insights with cutting-edge web and app solutions.
+            </p>
+
+            <h3>Programming Languages : </h3><br>
+            <img src="/programming/js.png" alt="JS" class="pr-icon">
+            <img src="/programming/java.png" alt="Java" class="pr-icon">
+            <img src="/programming/python.png" alt="Python" class="pr-icon">
+            <img src="/programming/cs.png" alt="C#" class="pr-icon">
+            <img src="/programming/c++.png" alt="C++" class="pr-icon">
+            <img src="/programming/c.png" alt="C" class="pr-icon">
+            <img src="/programming/kotlin.png" alt="Kotlin" class="pr-icon">
+            <img src="/programming/dart.png" alt="Kotlin" class="pr-icon">
+            <br><br>
+
+            <h3>Web Development :</h3><br>
+            <h4>Frontend :</h4>
+            <img src="/programming/html-css-js.png" alt="native html css js" class="pr-icon">
+            <img src="/programming/react.png" alt="React" class="pr-icon">
+            <img src="/programming/nextjs.png" alt="Next" class="pr-icon">
+            <img src="/programming/redux.png" alt="Redux" class="pr-icon">
+            <img src="/programming/svelte.png" alt="Svelte" class="pr-icon">
+            <img src="/programming/vite.svg" alt="Vite" class="pr-icon">
+            <img src="/programming/three.png" alt="Three" class="pr-icon">
+            <img src="/programming/bootstrap.png" alt="Bootstrap" class="pr-icon">
+            <img src="/programming/tailwind-css.png" alt="Tailwind" class="pr-icon">
+            <br><br>
+            <h4>Backend :</h4>
+            <img src="/programming/flask.png" alt="flask" class="pr-icon">
+            <img src="/programming/php.png" alt="PHP" class="pr-icon">
+            <img src="/programming/nodejs.png" alt="nodejs" class="pr-icon">
+            <img src="/programming/firebase.png" alt="Firebase" class="pr-icon">
+            <img src="/programming/mysql.png" alt="MYSQL" class="pr-icon">
+            <img src="/programming/mongodb.png" alt="MYSQL" class="pr-icon">
+            <br><br>
+
+            <h3>App Development :</h3><br>
+            <img src="/programming/react.png" alt="React Native" class="pr-icon">
+            <img src="/programming/androidstudio.png" alt="Android Studio" class="pr-icon">
+            <img src="/programming/flutter.png" alt="Flutter" class="pr-icon">
+            <img src="/programming/kivy.png" alt="Kivy" class="pr-icon">
+            <br><br>
+
+            <h3>Game Development :</h3><br>
+            <img src="/programming/unity.png" alt="Unity" class="pr-icon">
+
+            </section>
+
+            <section class="light left" id="projects">
+            <h2>👩🏽‍🚀 Projects</h2>
+
+            <h3>Embedded Systems</h3>
+
+            <div class="project-cards">
+                <!-- Add your project cards here -->
+                <div class="project-card">
+                <h3>RFID Based Attendance System</h3>
+                <p>
+                    RFID-based Attendance System using Arduino, RFID-RC522 Reader, and Tags with a user-friendly GUI with Tkinter for system control and data retrieval. Used Python for data processing and SQLite for secure data storage.
+                </p>
+                <a href="https://github.com/SandipLow/RFID-Attendance-System" class="MyBtn">Will be available</a>
+                </div>
+                
+            </div>
+
+            <h3>Full Stack Web Development</h3>
+
+            <div class="project-cards">
+                <!-- Add your project cards here -->
+                <div class="project-card">
+                <h3>San Drive</h3>
+                <p>React and Firebase Online Cloud Storage with Sharing feature.</p>
+                <a href="https://github.com/SandipLow/San-Drive" class="MyBtn">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                <h3>Code-Grabber</h3>
+                <p>
+                    MERN stack blogging site with Oauth Authentication.
+                </p>
+                <a href="https://github.com/SandipLow/Code-Grabber" class="MyBtn">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                <h3>CDEK</h3>
+                <p>
+                    React.js-firebase project showcasing games.
+                </p>
+                <a href="https://github.com/SandipLow/CDEK" class="MyBtn">View on GitHub</a>
+                </div>
+                <!-- Add more project cards as needed -->
+            </div>
             
-        </script>
-      </header>
+            <h3>App Development</h3>
 
-      <blockquote>
-        <p>I ❤ making Coding stuff</p>
-      </blockquote>
-
-      <section>
-        <h2>📜 Manifesto</h2>
-
-        <h3>Sandip Low</h3>
-        <p>Age : 20yrs</p>
-        <p>From : Baktarnagar, Raniganj, WestBengal, India</p>
-        <a target="_blank" href="/resume.html"><button class="MyBtn"> Download CV </button></a><br><br>
-
-        <p>
-          Greetings! I’m Sandip, an ambitious student and emerging technologist passionate about Power Electronics, Embedded Systems, Software Development, and Game Development. My academic voyage at NIT Durgapur is complemented by a strong practical understanding of Web Development using the MERN stack and Mobile App Development with Flutter.
-        </p>
-        <p>
-          In my final year of Electrical Engineering, I’m dedicated to deepening my conceptual strength while simultaneously honing my full-stack development skills. I believe in the power of interdisciplinary knowledge and am excited to blend my engineering insights with cutting-edge web and app solutions.
-        </p>
-
-        <h3>Programming Languages : </h3><br>
-        <img src="/programming/js.png" alt="JS" class="pr-icon">
-        <img src="/programming/java.png" alt="Java" class="pr-icon">
-        <img src="/programming/python.png" alt="Python" class="pr-icon">
-        <img src="/programming/cs.png" alt="C#" class="pr-icon">
-        <img src="/programming/c++.png" alt="C++" class="pr-icon">
-        <img src="/programming/c.png" alt="C" class="pr-icon">
-        <img src="/programming/kotlin.png" alt="Kotlin" class="pr-icon">
-        <img src="/programming/dart.png" alt="Kotlin" class="pr-icon">
-        <br><br>
-
-        <h3>Web Development :</h3><br>
-        <h4>Frontend :</h4>
-        <img src="/programming/html-css-js.png" alt="native html css js" class="pr-icon">
-        <img src="/programming/react.png" alt="React" class="pr-icon">
-        <img src="/programming/nextjs.png" alt="Next" class="pr-icon">
-        <img src="/programming/redux.png" alt="Redux" class="pr-icon">
-        <img src="/programming/svelte.png" alt="Svelte" class="pr-icon">
-        <img src="/programming/vite.svg" alt="Vite" class="pr-icon">
-        <img src="/programming/three.png" alt="Three" class="pr-icon">
-        <img src="/programming/bootstrap.png" alt="Bootstrap" class="pr-icon">
-        <img src="/programming/tailwind-css.png" alt="Tailwind" class="pr-icon">
-        <br><br>
-        <h4>Backend :</h4>
-        <img src="/programming/flask.png" alt="flask" class="pr-icon">
-        <img src="/programming/php.png" alt="PHP" class="pr-icon">
-        <img src="/programming/nodejs.png" alt="nodejs" class="pr-icon">
-        <img src="/programming/firebase.png" alt="Firebase" class="pr-icon">
-        <img src="/programming/mysql.png" alt="MYSQL" class="pr-icon">
-        <img src="/programming/mongodb.png" alt="MYSQL" class="pr-icon">
-        <br><br>
-
-        <h3>App Development :</h3><br>
-        <img src="/programming/react.png" alt="React Native" class="pr-icon">
-        <img src="/programming/androidstudio.png" alt="Android Studio" class="pr-icon">
-        <img src="/programming/flutter.png" alt="Flutter" class="pr-icon">
-        <img src="/programming/kivy.png" alt="Kivy" class="pr-icon">
-        <br><br>
-
-        <h3>Game Development :</h3><br>
-        <img src="/programming/unity.png" alt="Unity" class="pr-icon">
-
-      </section>
-
-      <section class="light left" id="projects">
-        <h2>👩🏽‍🚀 Projects</h2>
-
-        <h3>Embedded Systems</h3>
-
-        <div class="project-cards">
-          <!-- Add your project cards here -->
-          <div class="project-card">
-            <h3>RFID Based Attendance System</h3>
-            <p>
-              RFID-based Attendance System using Arduino, RFID-RC522 Reader, and Tags with a user-friendly GUI with Tkinter for system control and data retrieval. Used Python for data processing and SQLite for secure data storage.
-            </p>
-            <a href="https://github.com/SandipLow/RFID-Attendance-System" class="MyBtn">Will be available</a>
-          </div>
-          
-        </div>
-
-        <h3>Full Stack Web Development</h3>
-
-        <div class="project-cards">
-          <!-- Add your project cards here -->
-          <div class="project-card">
-            <h3>San Drive</h3>
-            <p>React and Firebase Online Cloud Storage with Sharing feature.</p>
-            <a href="https://github.com/SandipLow/San-Drive" class="MyBtn">View on GitHub</a>
-          </div>
-          <div class="project-card">
-            <h3>Code-Grabber</h3>
-            <p>
-              MERN stack blogging site with Oauth Authentication.
-            </p>
-            <a href="https://github.com/SandipLow/Code-Grabber" class="MyBtn">View on GitHub</a>
-          </div>
-          <div class="project-card">
-            <h3>CDEK</h3>
-            <p>
-              React.js-firebase project showcasing games.
-            </p>
-            <a href="https://github.com/SandipLow/CDEK" class="MyBtn">View on GitHub</a>
-          </div>
-          <!-- Add more project cards as needed -->
-        </div>
-        
-        <h3>App Development</h3>
-
-        <div class="project-cards">
-          <!-- Add your project cards here -->
-          <div class="project-card">
-            <h3>Cloud Storage Client</h3>
-            <p>Flutter app for managing multiple Cloud Storages in one place</p>
-            <a href="https://github.com/SandipLow/cloud_storage_client" class="MyBtn">View on GitHub</a>
-          </div>
-          <!-- Add more project cards as needed -->
-        </div>
-        
-        <h3>Game Development</h3>
-
-        <div class="project-cards">
-          <!-- Add your project cards here -->
-          <div class="project-card">
-            <h3>Shooteeze</h3>
-            <p>
-              My First FPS game. Still in making but playable
-            </p>
-            <a href="https://cdek.vercel.app/QGTzyxYJ02XVMoIY7uKU" class="MyBtn">View on CDEK</a>
-          </div>
-          <!-- Add more project cards as needed -->
-        </div>
-
-        <!-- <div>
-            <iframe 
-              title="Projects" 
-              src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYX56fxRTKMHvz2wP2PVH8ntNe8350CPY7_MX7wWAUixgzm7B39uPD4CzULqN6h47eTi_9k9z2Jz97/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
-              style="width: 100%; height: 700px;" >
-            </iframe>
-        </div> -->
-
-      </section>
-
-      <section class="experience" id="experience">
-        <h2>👨‍💻 Experience</h2>
-      
-        <div class="experience-item">
-          <h3>Summer Intern at CSIR-Central Mechanical Engineering Research Institute (CMERI) - (2024)</h3>
-          <p>
-            Inverter Design for Motor Drives in EV. Explored various high frequency current sensing techniques including Hall effect and TMR based.
-          </p>
-        </div>
-      
-        <div class="experience-item">
-          <h3>Software Developer Intern at Apollo Clinic Durgapur - (2023)</h3>
-          <p>
-            Worked as a freelance software developer responsible for:
-            <ul>
-              <li>Analysis of workflow and proposing software solutions.</li>
-              <li>Developed various G-Suite extensions for workflow automation.</li>
-              <li>Web development and monitoring.</li>
-            </ul>
-          </p>
-        </div>   
-      </section>
-
-      <section class="profiles left" id="profiles">
-        <h2>🎓 Github</h2>
-        <img src="https://github-readme-stats.vercel.app/api?username=SandipLow&count_private=true&show_icons=true&hide_title=true" alt="GitHub Stats">
-
-        <h2>🎓 Leetcode</h2>
-        <img src="https://leetcode-stats.vercel.app/api?username=SandipLow" alt="LeetCode Stats">
-
-        <h2>🎓 GeeksForGeeks</h2>
-        <img src="https://geeksforgeeks-stats.vercel.app/api?username=sandiplowsnuf" alt="GeeksForGeeks Stats">
-      </section>
-      
-
-      <blockquote>
-        <p>
-          The path from dreams to success does exist. May you have the vision to find it, the courage to get on to it, and the perseverance to follow it.
-          <br><br> - Kalpana Ma'am</p>
-      </blockquote>
-
-      <section class="left">
-        <h2>🌮 Let's Come Together</h2>
-
-        <h3>
-          No matter from where are you from....<br>
-          Feel free to contact me...
-        </h3>
-        <p>
-          You can find me on most social media platforms!.Please use my email only for business inquires, or other important issues
-        </p>
-        
-        <h3>Social links :</h3>
-        <!-- <a href=""><img src="./images/whatsapp.png" alt="WA" class="pr-icon"></a> -->
-        <a href="mailto:sandipbkt2002@gmail.com"><img src="/icons/gmail.png" alt="FB" class="pr-icon" style="height: 30px; margin-bottom: 8px;"></a>
-        <a href="https://telegram.me/Sandip_Low"><img src="/icons/telegram.png" alt="FB" class="pr-icon"></a>
-        <a href="https://wa.me/918927886351?text=Hi...❤!"><img src="/icons/whatsapp.png" alt="FB" class="pr-icon"></a>
-        <a href="https://facebook.com/asad.ion.5"><img src="/icons/facebook.png" alt="FB" class="pr-icon"></a>
-        <a href="https://discordapp.com/users/Sandip#3032"><img src="/icons/discord.png" alt="discord" class="pr-icon"></a>
-        <a href="https://github.com/SandipLow"><img src="/icons/github.png" alt="github" class="pr-icon"></a>
-        <a href="https://youtube.com/channel/UC6DAOimMnTUCpPQ2_-7RtZg"><img src="/icons/youtube.png" alt="YT" class="pr-icon"></a>
-        <a href="/CDEK"><img src="/icons/cdek.png" alt="CDEK" class="pr-icon"></a>
-        
-        <h3> Hire me : </h3>
-        <div style="display: flex; flex-wrap: wrap;">
-
-          <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block; margin-top: 12px; margin-left: 6px;'>
-            <a itemprop='url' href=https://www.fiverr.com/sandiplow rel="nofollow" target="_blank" style='display: inline-block;'>
-              <div class='fiverr-seller-content' id='fiverr-seller-widget-content-06fcb772-5f37-4ade-aa2b-d3ab86691c64' itemprop='contentURL' style='display: none;'></div>
-              <div id='fiverr-widget-seller-data' style='display: none;'>
-                  <div itemprop='name' >sandiplow</div>
-                  <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
-                  <div itemprop='jobtitle'>Seller</div>
-                  <div itemprop='description'>
-                    Hi There , I am Sandip 20 y/o guy who loves programming and Game Development
-                    I can create full-stack web apps using MERN, firebase, flutter.
-                  </div>
-              </div>
-            </a>
-          </div>
-  
-          <script id='fiverr-seller-widget-script-06fcb772-5f37-4ade-aa2b-d3ab86691c64' src='https://widgets.fiverr.com/api/v1/seller/sandiplow?widget_id=06fcb772-5f37-4ade-aa2b-d3ab86691c64' data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
-  
-          <a href="https://freelancer.com/u/sandiplow" ><div style="background-color: aliceblue; color: black; text-align: center; width: 170px; padding: 3px; margin-left: 12px; margin-right: 6px; margin-top: 12px;">
-            <img style="width: 100%;" src="/me.jpg" alt="">
-            <img style="width: 100%;" src="/icons/freelancer-logo.svg" alt="">
-            <span style="font-weight: bold;">Seller</span><br>
-            <button style="background-color: aqua; border: none; height: 24px; margin-bottom: 12px;" >Check out</button>
-          </div></a>
-  
-          <a href="https://www.upwork.com/freelancers/~013135b0f44d5650c1" style="text-decoration: none;" ><div style="background-color: aliceblue; color: black; text-align: center; width: 180px; padding: 3px; margin-left: 6px; margin-right: 6px; margin-top: 12px;">
-            <div style="background-color: green; padding: 12px;" >
-              <img style="width: 100%;" src="/me _rounded.png" alt="">
+            <div class="project-cards">
+                <!-- Add your project cards here -->
+                <div class="project-card">
+                <h3>Cloud Storage Client</h3>
+                <p>Flutter app for managing multiple Cloud Storages in one place</p>
+                <a href="https://github.com/SandipLow/cloud_storage_client" class="MyBtn">View on GitHub</a>
+                </div>
+                <!-- Add more project cards as needed -->
             </div>
-            <div style="margin-top: -32px;" >
-              <img style="height: 64px; border-radius: 50%;" src="/icons/upwork.png" alt="">
+            
+            <h3>Game Development</h3>
+
+            <div class="project-cards">
+                <!-- Add your project cards here -->
+                <div class="project-card">
+                <h3>Shooteeze</h3>
+                <p>
+                    My First FPS game. Still in making but playable
+                </p>
+                <a href="https://cdek.vercel.app/QGTzyxYJ02XVMoIY7uKU" class="MyBtn">View on CDEK</a>
+                </div>
+                <!-- Add more project cards as needed -->
             </div>
-            <span style="font-weight: bold; font-size: small; font-family: Arial, Helvetica, sans-serif; ">Web Developer || React-NodeJS-MongoDB</span><br>
-            <button style="background-image: linear-gradient(360deg, #6fda44, green);; color: aliceblue; border: none; padding: 8px; width: 80%; border-radius: 4px; margin: 12px 0 12px 0; cursor: pointer; font-weight: bold;" >Hire</button>
-          </div></a>
 
-        </div>
+            <!-- <div>
+                <iframe 
+                    title="Projects" 
+                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRYX56fxRTKMHvz2wP2PVH8ntNe8350CPY7_MX7wWAUixgzm7B39uPD4CzULqN6h47eTi_9k9z2Jz97/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" 
+                    style="width: 100%; height: 700px;" >
+                </iframe>
+            </div> -->
+
+            </section>
+
+            <section class="experience" id="experience">
+            <h2>👨‍💻 Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Summer Intern at CSIR-Central Mechanical Engineering Research Institute (CMERI) - (2024)</h3>
+                <p>
+                Inverter Design for Motor Drives in EV. Explored various high frequency current sensing techniques including Hall effect and TMR based.
+                </p>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Software Developer Intern at Apollo Clinic Durgapur - (2023)</h3>
+                <p>
+                Worked as a freelance software developer responsible for:
+                <ul>
+                    <li>Analysis of workflow and proposing software solutions.</li>
+                    <li>Developed various G-Suite extensions for workflow automation.</li>
+                    <li>Web development and monitoring.</li>
+                </ul>
+                </p>
+            </div>   
+            </section>
+
+            <section class="profiles left" id="profiles">
+            <h2>🎓 Github</h2>
+            <img src="https://github-readme-stats.vercel.app/api?username=SandipLow&count_private=true&show_icons=true&hide_title=true" alt="GitHub Stats">
+
+            <h2>🎓 Leetcode</h2>
+            <img src="https://leetcode-stats.vercel.app/api?username=SandipLow" alt="LeetCode Stats">
+
+            <h2>🎓 GeeksForGeeks</h2>
+            <img src="https://geeksforgeeks-stats.vercel.app/api?username=sandiplowsnuf" alt="GeeksForGeeks Stats">
+            </section>
+            
+
+            <blockquote>
+            <p>
+                The path from dreams to success does exist. May you have the vision to find it, the courage to get on to it, and the perseverance to follow it.
+                <br><br> - Kalpana Ma'am</p>
+            </blockquote>
+
+            <section class="left">
+            <h2>🌮 Let's Come Together</h2>
+
+            <h3>
+                No matter from where are you from....<br>
+                Feel free to contact me...
+            </h3>
+            <p>
+                You can find me on most social media platforms!.Please use my email only for business inquires, or other important issues
+            </p>
+            
+            <h3>Social links :</h3>
+            <!-- <a href=""><img src="./images/whatsapp.png" alt="WA" class="pr-icon"></a> -->
+            <a href="mailto:sandipbkt2002@gmail.com"><img src="/icons/gmail.png" alt="FB" class="pr-icon" style="height: 30px; margin-bottom: 8px;"></a>
+            <a href="https://telegram.me/Sandip_Low"><img src="/icons/telegram.png" alt="FB" class="pr-icon"></a>
+            <a href="https://wa.me/918927886351?text=Hi...❤!"><img src="/icons/whatsapp.png" alt="FB" class="pr-icon"></a>
+            <a href="https://facebook.com/asad.ion.5"><img src="/icons/facebook.png" alt="FB" class="pr-icon"></a>
+            <a href="https://discordapp.com/users/Sandip#3032"><img src="/icons/discord.png" alt="discord" class="pr-icon"></a>
+            <a href="https://github.com/SandipLow"><img src="/icons/github.png" alt="github" class="pr-icon"></a>
+            <a href="https://youtube.com/channel/UC6DAOimMnTUCpPQ2_-7RtZg"><img src="/icons/youtube.png" alt="YT" class="pr-icon"></a>
+            <a href="/CDEK"><img src="/icons/cdek.png" alt="CDEK" class="pr-icon"></a>
+            
+            <h3> Hire me : </h3>
+            <div style="display: flex; flex-wrap: wrap;">
+
+                <div itemscope itemtype='http://schema.org/Person' class='fiverr-seller-widget' style='display: inline-block; margin-top: 12px; margin-left: 6px;'>
+                <a itemprop='url' href=https://www.fiverr.com/sandiplow rel="nofollow" target="_blank" style='display: inline-block;'>
+                    <div class='fiverr-seller-content' id='fiverr-seller-widget-content-06fcb772-5f37-4ade-aa2b-d3ab86691c64' itemprop='contentURL' style='display: none;'></div>
+                    <div id='fiverr-widget-seller-data' style='display: none;'>
+                        <div itemprop='name' >sandiplow</div>
+                        <div itemscope itemtype='http://schema.org/Organization'><span itemprop='name'>Fiverr</span></div>
+                        <div itemprop='jobtitle'>Seller</div>
+                        <div itemprop='description'>
+                        Hi There , I am Sandip 20 y/o guy who loves programming and Game Development
+                        I can create full-stack web apps using MERN, firebase, flutter.
+                        </div>
+                    </div>
+                </a>
+                </div>
+
+                <script id='fiverr-seller-widget-script-06fcb772-5f37-4ade-aa2b-d3ab86691c64' src='https://widgets.fiverr.com/api/v1/seller/sandiplow?widget_id=06fcb772-5f37-4ade-aa2b-d3ab86691c64' data-config='{"category_name":"Programming \u0026 Tech"}' async='true' defer='true'></script>
+
+                <a href="https://freelancer.com/u/sandiplow" ><div style="background-color: aliceblue; color: black; text-align: center; width: 170px; padding: 3px; margin-left: 12px; margin-right: 6px; margin-top: 12px;">
+                <img style="width: 100%;" src="/me.jpg" alt="">
+                <img style="width: 100%;" src="/icons/freelancer-logo.svg" alt="">
+                <span style="font-weight: bold;">Seller</span><br>
+                <button style="background-color: aqua; border: none; height: 24px; margin-bottom: 12px;" >Check out</button>
+                </div></a>
+
+                <a href="https://www.upwork.com/freelancers/~013135b0f44d5650c1" style="text-decoration: none;" ><div style="background-color: aliceblue; color: black; text-align: center; width: 180px; padding: 3px; margin-left: 6px; margin-right: 6px; margin-top: 12px;">
+                <div style="background-color: green; padding: 12px;" >
+                    <img style="width: 100%;" src="/me _rounded.png" alt="">
+                </div>
+                <div style="margin-top: -32px;" >
+                    <img style="height: 64px; border-radius: 50%;" src="/icons/upwork.png" alt="">
+                </div>
+                <span style="font-weight: bold; font-size: small; font-family: Arial, Helvetica, sans-serif; ">Web Developer || React-NodeJS-MongoDB</span><br>
+                <button style="background-image: linear-gradient(360deg, #6fda44, green);; color: aliceblue; border: none; padding: 8px; width: 80%; border-radius: 4px; margin: 12px 0 12px 0; cursor: pointer; font-weight: bold;" >Hire</button>
+                </div></a>
+
+            </div>
 
 
 
-        <h3>
-          Ooorr... Simply Message me though my form 😉 : 
-        </h3>
+            <h3>
+                Ooorr... Simply Message me though my form 😉 : 
+            </h3>
 
-        <form id="contact-request-form" action="submit">
-          <label for="name">Name* : </label>
-          <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
-          <label for="email">Email* : </label>
-          <input type="email" name="email" placeholder="Enter a valid Email to get response" required><br><br>
-          <label for="sub"> Purpose of contact : </label><br><br>
-          <textarea id="sub" name="subject" cols="30" rows="5" required></textarea><br><br>
-          <button type="submit" class="MyBtn">Submit</button>
-        </form>
+            <form id="contact-request-form" action="submit">
+                <label for="name">Name* : </label>
+                <input type="text" name="name" placeholder="Enter Your Name" required><br><br>
+                <label for="email">Email* : </label>
+                <input type="email" name="email" placeholder="Enter a valid Email to get response" required><br><br>
+                <label for="sub"> Purpose of contact : </label><br><br>
+                <textarea id="sub" name="subject" cols="30" rows="5" required></textarea><br><br>
+                <button type="submit" class="MyBtn">Submit</button>
+            </form>
 
-        <p>
-          I'll got you back in 48 hours (if necessary)..
-        </p>
+            <p>
+                I'll got you back in 48 hours (if necessary)..
+            </p>
 
-      </section>
+            </section>
 
-      <blockquote>
-        <p>Thanks for watching!</p>
-      </blockquote>
+            <blockquote>
+            <p>Thanks for watching!</p>
+            </blockquote>
 
 
-    </main>
+        </main>
 
-    <script type="module" src="./main.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <script type="module" src="./js/contact.js"></script>
-  </body>
+        <script type="module" src="./main.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script type="module" src="./js/contact.js"></script>
+    </body>
 </html>

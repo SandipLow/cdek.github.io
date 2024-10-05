@@ -1,214 +1,168 @@
-import * as THREE from "three"
-// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-const loadingScr = document.getElementById("loading_scene")
-const bg = document.getElementById("bg")
-const content = document.getElementById("content")
-const load_progress = document.getElementById("load_progress")
+import * as THREE from "three";
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-// All pre loaders : scene, cam & renderer
+// DOM elements
+const loadingScreen = document.getElementById("loading_scene");
+const backgroundCanvas = document.getElementById("bg");
+const content = document.getElementById("content");
+const loadProgress = document.getElementById("load_progress");
+
+// Scene and Renderer setup
 const scene = new THREE.Scene();
-
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHeight, 0.1, 1000);
-
-// const helpcam = new THREE.PerspectiveCamera(75, window.innerWidth/ window.innerHeight, 0.1, 1000);
-
 const renderer = new THREE.WebGLRenderer({
-  canvas : bg,
+  canvas: backgroundCanvas,
+  antialias: true, // For smoother edges
 });
+renderer.shadowMap.enabled = true; // Enable shadow mapping
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.setSize(window.innerWidth, window.innerHeight);
 
-// renderer.setPixelRatio(window.devicePixelRatio);
-// renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.x = 5;
-camera.position.y = 10;
-camera.position.z = 20;
-// helpcam.position.setZ(30);
+// Camera Setup
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
+camera.position.set(0, 20, 100); // Pull camera back to fit the solar system
 
+// Orbit Controls for better navigation
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true; // Smooth camera movement
+controls.dampingFactor = 0.1;
+
+// Loading Manager with progress feedback
 const loadingManager = new THREE.LoadingManager();
-
-loadingManager.onStart = function ( url, itemsLoaded, itemsTotal ) {
-
-	load_progress.innerText = `Started loading file: ${url} .\nLoaded ${itemsLoaded} of ${itemsTotal} files.`
-
+loadingManager.onStart = (url, itemsLoaded, itemsTotal) => {
+  loadProgress.innerText = `Started loading: ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files.`;
+};
+loadingManager.onLoad = () => {
+  loadingScreen.style.display = 'none';
+  backgroundCanvas.style.display = 'block';
+  content.style.display = 'grid';
+};
+loadingManager.onProgress = (url, itemsLoaded, itemsTotal) => {
+  loadProgress.innerText = `Loading: ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files.`;
+};
+loadingManager.onError = (url) => {
+  console.error(`Error loading: ${url}`);
 };
 
-loadingManager.onLoad = function () {
-	loadingScr.style.display = 'none';
-  bg.style.display = 'block'
-  content.style.display = 'grid'
-};
-
-loadingManager.onProgress = function (url, itemsLoaded, itemsTotal ) {
-
-	load_progress.innerText = `Loading file:  ${url}.\nLoaded ${itemsLoaded} of ${itemsTotal} files.`;
-
-};
-
-loadingManager.onError = function (url) {
-
-	console.error( 'There was an error loading ' + url );
-
-};
-
+// Textures
 const textureLoader = new THREE.TextureLoader(loadingManager);
-const binaryTextureLoader = new THREE.BinaryTextureLoader(loadingManager);
+const bgTexture = textureLoader.load('/bg.jpg');
+const meTexture = textureLoader.load('/me.jpg');
 
-// Texture :
-const bg_texture = textureLoader.load('/bg.jpg');
-const me_texture = textureLoader.load('/me.jpg');
-const me_pix_texture = textureLoader.load('/me_pixel.png');
-const earth_texture = textureLoader.load('/planets/earth.jpg');
-const sun_texture = textureLoader.load('/planets/2k_sun.jpg');
-const earth_normal = binaryTextureLoader.load('/planets/earth_normal_map.tif');
-const mercury_texture = textureLoader.load('/planets/mercury.jpg');
-const venus_texture = textureLoader.load('/planets/venus.jpg');
-const mars_texture = textureLoader.load('/planets/mars.jpg');
-const jupiter_texture = textureLoader.load('/planets/jupiter.jpg');
-const saturn_texture = textureLoader.load('/planets/saturn.jpg');
-const uranus_texture = textureLoader.load('/planets/uranus.jpg');
-const neptune_texture = textureLoader.load('/planets/neptune.jpg');
+// Planets' Textures
+const planetTextures = {
+  earth: textureLoader.load('/planets/earth.jpg'),
+  sun: textureLoader.load('/planets/2k_sun.jpg'),
+  mercury: textureLoader.load('/planets/mercury.jpg'),
+  venus: textureLoader.load('/planets/venus.jpg'),
+  mars: textureLoader.load('/planets/mars.jpg'),
+  jupiter: textureLoader.load('/planets/jupiter.jpg'),
+  saturn: textureLoader.load('/planets/saturn.jpg'),
+  uranus: textureLoader.load('/planets/uranus.jpg'),
+  neptune: textureLoader.load('/planets/neptune.jpg')
+};
+const earthNormalMap = textureLoader.load('/planets/earth_normal_map.tif');
 
-scene.background = bg_texture;
+// Set background as stars instead of an image
+scene.background = new THREE.Color(0x000000);
+const starGeometry = new THREE.BufferGeometry();
+const starMaterial = new THREE.PointsMaterial({ color: 0xffffff });
 
-// Cube :
-const geometry = new THREE.BoxGeometry( 10, 10, 10 );
-const material = new THREE.MeshBasicMaterial( {map: me_texture} );
-const cube = new THREE.Mesh( geometry, material );
+// Create random stars for the background
+const starCount = 10000;
+const starVertices = [];
+for (let i = 0; i < starCount; i++) {
+  const x = THREE.MathUtils.randFloatSpread(2000);
+  const y = THREE.MathUtils.randFloatSpread(2000);
+  const z = THREE.MathUtils.randFloatSpread(2000);
+  starVertices.push(x, y, z);
+}
+starGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
+const stars = new THREE.Points(starGeometry, starMaterial);
+scene.add(stars);
 
-cube.position.set(20, 0, 0);
+// Lighting Setup
+const sunLight = new THREE.PointLight(0xffffff, 1.5, 5000); // Intense light from the sun
+sunLight.position.set(0, 0, 0);
+sunLight.castShadow = true; // Enable shadows
 
-scene.add(cube);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.1); // Soft ambient light
 
+scene.add(sunLight, ambientLight);
 
-// Cube2 :
-const cube2 = new THREE.Mesh( 
-  new THREE.BoxGeometry( 10, 10, 10 ),
-  new THREE.MeshBasicMaterial( {map: me_pix_texture} ) 
-);
-
-cube2.position.set(20, 0, 30);
-
-scene.add(cube2);
-
-
-// Sun : 
+// Glow Effect for Sun (Lensflare or Bloom)
 const sun = new THREE.Mesh(
-  new THREE.SphereGeometry(10),
-  new THREE.MeshStandardMaterial( {
-    // color: 0xffcc66, 
-    // emissive: 0xff0000, 
-    // emissiveIntensity: 5
-    map: sun_texture
-  } )
+  new THREE.SphereGeometry(15, 32, 32),
+  new THREE.MeshStandardMaterial({ map: planetTextures.sun, emissive: 0xffff00, emissiveIntensity: 1 })
 );
-
+sun.position.set(0, 0, 0);
 scene.add(sun);
 
+// Orbit Helper for Planets
+function createOrbit(radius, segments = 64) {
+  const orbitGeometry = new THREE.RingGeometry(radius - 0.5, radius + 0.5, segments);
+  const orbitMaterial = new THREE.MeshBasicMaterial({ color: 0xaaaaaa, side: THREE.DoubleSide });
+  const orbit = new THREE.Mesh(orbitGeometry, orbitMaterial);
+  orbit.rotation.x = Math.PI / 2;
+  return orbit;
+}
 
-// Earth : 
-const earth_mesh = new THREE.Mesh(
-  new THREE.SphereGeometry(),
-  new THREE.MeshStandardMaterial( {map: earth_texture, normalMap: earth_normal} )
-);
-const earth = new THREE.Object3D();
-earth_mesh.position.z = 46.5
-earth.add(earth_mesh)
+// Add Orbit Rings (For example, around Earth and Mars)
+scene.add(createOrbit(50)); // Earth
+scene.add(createOrbit(70)); // Mars
 
-scene.add(earth);
-
-// Planets : 
+// Planet class for solar system
 class Planet extends THREE.Object3D {
-  constructor (radius, texture, distance, rotation_speed, revolution_speed) {
+  constructor(radius, texture, distance, rotationSpeed, revolutionSpeed) {
     super();
-    this.radius = radius;
-    this.texture = texture;
-    this.distance = distance;
-    this.rotation_speed = rotation_speed;
-    this.revolution_speed = revolution_speed;
-    
     this.mesh = new THREE.Mesh(
-      new THREE.SphereGeometry(this.radius),
-      new THREE.MeshBasicMaterial( {map: this.texture} )
+      new THREE.SphereGeometry(radius, 32, 32),
+      new THREE.MeshStandardMaterial({ map: texture, bumpMap: earthNormalMap, bumpScale: 0.05 })
     );
-
-    this.mesh.position.z = this.distance;
-    super.add(this.mesh);
+    this.mesh.castShadow = true;
+    this.mesh.position.z = distance;
+    this.rotationSpeed = rotationSpeed;
+    this.revolutionSpeed = revolutionSpeed;
+    this.add(this.mesh);
   }
 }
 
-let mercury = new Planet(0.5, mercury_texture, 17.5, 0.01/176, 0.01/0.2);
-let venus = new Planet(1, venus_texture, 33.5, 0.01/100, 0.01/0.6);
-let mars = new Planet(1.5, mars_texture, 71, 0.01, 0.01/2);
-let jupiter = new Planet(3, jupiter_texture, 200, 0.01/0.4, 0.01/10);
-let saturn = new Planet(2.5, saturn_texture, 400, 0.01/0.4, 0.01/30);
-let uranus = new Planet(2, uranus_texture, 800, 0.01/0.7, 0.01/80);
-let neptune = new Planet(2, neptune_texture, 1200, 0.01/0.7, 0.01/160);
+// Create planets
+const planets = [
+  new Planet(1, planetTextures.mercury, 30, 0.005, 0.01 / 88),
+  new Planet(1.2, planetTextures.venus, 45, 0.005, 0.01 / 225),
+  new Planet(2, planetTextures.earth, 60, 0.01, 0.01 / 365), // Earth with normal map
+  new Planet(1.5, planetTextures.mars, 85, 0.01, 0.01 / 687),
+  new Planet(5, planetTextures.jupiter, 120, 0.02, 0.01 / 4332),
+  new Planet(4, planetTextures.saturn, 160, 0.015, 0.01 / 10759),
+  new Planet(3.5, planetTextures.uranus, 200, 0.01, 0.01 / 30687),
+  new Planet(3, planetTextures.neptune, 240, 0.01, 0.01 / 60190)
+];
 
+planets.forEach(planet => scene.add(planet));
 
-let planets = [mercury, venus, mars, jupiter, saturn, uranus, neptune];
-
-planets.forEach(planet => scene.add(planet))
-
-
-// Lighting : 
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(10, 10, 10);
-
-const ambientLight = new THREE.AmbientLight(0xffffff);
-
-scene.add(pointLight, ambientLight);
-
-
-
-
-
-// Helper :
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// const camhelper = new THREE.CameraHelper(camera);
-// scene.add( camhelper, gridHelper);
-
-// const controls = new OrbitControls(helpcam, renderer.domElement);
-
-
-// Scroll Animation :
+// Camera Movement on Scroll
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-
-  cube.rotation.y += 0.01;
-  cube.rotation.z += 0.01;
-
-  camera.position.z = 20 - t * 0.01;
+  camera.position.z = 100 - t * 0.01;
   camera.position.y = -t * 0.002;
-  // camera.rotation.x = t * 0.0002;
 }
-
 document.body.onscroll = moveCamera;
 moveCamera();
 
-
-// Animation Loop :
-function animate () {
+// Animation Loop
+function animate() {
   requestAnimationFrame(animate);
-  earth_mesh.rotateOnAxis(
-    new THREE.Vector3(0.39, 0.92, 0),
-    0.01
-  );
-  earth.rotation.y += 0.01;
 
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.01;
+  // Rotate the sun
+  sun.rotation.y += 0.001;
 
+  // Rotate and revolve planets
   planets.forEach(planet => {
-    planet.mesh.rotation.y += planet.rotation_speed;
-    planet.rotation.y += planet.revolution_speed;
-  })
+    planet.mesh.rotation.y += planet.rotationSpeed; // Rotation around axis
+    planet.rotation.y += planet.revolutionSpeed;    // Orbit around the sun
+  });
 
-  // renderer.render(helpcam);
-    
-  renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
+  controls.update(); // Update orbit controls
   renderer.render(scene, camera);
 }
-
 animate();
