@@ -1,27 +1,25 @@
 const form = document.getElementById('contact-request-form')
 
-//db initialize
-firebase.initializeApp({
-    apiKey: "AIzaSyAn3eeoZ52fCepqUmgc2X7UOGFlMT8w7CI",
-    authDomain: "cdek-8927886351.firebaseapp.com",
-    projectId: "cdek-8927886351",
-});
-
-var db = firebase.firestore();
-
 function addData(form) {
-    db.collection("contact_request").add({
-        name: form.name.value,
-        email: form.email.value,
-        message: form.subject.value
+    fetch("https://api.sandiplow.me/contact/message", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            name: form.name.value,
+            email: form.email.value,
+            message: form.subject.value
+        })
     })
-    .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
         alert("Thanks for contacting...😉")
     })
     .catch((error) => {
+        console.error('Error:', error);
         alert("Error adding document...😢");
-        // console.log("Error adding document: ", error);
     });
 }
 
