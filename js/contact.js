@@ -12,10 +12,11 @@ function addData(form) {
             message: form.subject.value
         })
     })
-    .then(response => response.json())
+    .then(response => response.text())
     .then(data => {
         console.log('Success:', data);
         alert("Thanks for contacting...😉")
+        form.reset();
     })
     .catch((error) => {
         console.error('Error:', error);

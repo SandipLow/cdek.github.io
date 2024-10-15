@@ -14,8 +14,6 @@ const renderer = new THREE.WebGLRenderer({
   antialias: true, // For smoother edges
 });
 renderer.shadowMap.enabled = true; // Enable shadow mapping
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
 
 // Camera Setup
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 2000);
@@ -161,6 +159,9 @@ function animate() {
     planet.mesh.rotation.y += planet.rotationSpeed; // Rotation around axis
     planet.rotation.y += planet.revolutionSpeed;    // Orbit around the sun
   });
+  
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
 
   controls.update(); // Update orbit controls
   renderer.render(scene, camera);
